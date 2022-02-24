@@ -10,7 +10,7 @@ const Header = () => {
           <span>Adipisicing</span>
           <span>Elites</span>
         </h1>
-        <p class='subtitle'>
+        <p className='subtitle'>
           VOLUPTAS AUT <br />& VERITASIS NOSTRUM
         </p>
         <div className='decor__circle'></div>
