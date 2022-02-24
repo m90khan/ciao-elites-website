@@ -57,7 +57,7 @@ export const HeaderContainer = styled.div`
     align-items: center;
     position: relative;
     flex-direction: column;
-    perspective: 1000px;
+    perspective: 1500px;
     z-index: 2;
   }
   header h1 {
