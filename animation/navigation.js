@@ -41,6 +41,6 @@ export const initNavigation = () => {
     },
     onEnter: ({ direction }) => navAnimation(direction), // direction => scrolling up or down
     onLeaveBack: ({ direction }) => navAnimation(direction), // onCome back
-    markers: true,
+    markers: false,
   });
 };

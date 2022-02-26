@@ -5,8 +5,8 @@ export const updateBodyColor = (color) => {
   document.documentElement.style.setProperty('--bcg-fill-color', color);
 };
 export const updateBackgroundColor = (color) => {
-  // document.querySelector('body').style.backgroundColor = color;
   gsap.to('.fill-background', { backgroundColor: color, ease: 'none' });
+  // document.documentElement.style.setProperty('--bcg-fill-color', color);
 };
 export const getTextHeight = (textCopy) => {
   return textCopy.clientHeight;

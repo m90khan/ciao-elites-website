@@ -15,7 +15,7 @@ export const GlobalStyles = createGlobalStyle`
 
   --bcg-loaderblue: #758A94;
   --bcg-loaderbluedark: #566C76;
-  --bcg-fill-color: var(--bcg-green);
+  --bcg-fill-color: var(--text-dark-color);
 
   --loader-width: 27.36vw;
   --loader-height: 50vh;
@@ -29,19 +29,33 @@ export const GlobalStyles = createGlobalStyle`
 body {
   font: 16px/1.7 'Source Sans Pro', Helvetica, Helvetica Neue, Arial, sans-serif;
   color: var(--text-dark-color);
-  background: var(--text-dark-color)
+  background: var(--text-dark-color) ;
+  /* overflow-y : scroll */
+  
 }
 .is-loading {
   background-color: var(--bcg-loaderblue);
 }
-/* #viewport {
+#viewport {
   overflow: hidden;
   position: fixed;
   height: 100%;
   width: 100%;
   top: 0;
   left: 0;
-} */
+}
+
+#scroll-container{
+  overflow: hidden;
+  position: absolute;
+ 
+  width: 100%;
+   will-change : transform;
+   backface-visibility: hidden
+
+}
+
+
 .chapter {
     position: absolute;
     left: var(--h-gutter);
@@ -60,8 +74,8 @@ body {
   width: 100%;
   height: 100%;
   position: fixed;
-  /* will-change: background-color; */
-  /* background-color: var(--bcg-fill-color); */
+  will-change: background-color;
+  background-color: var(--bcg-fill-color);
   transition: background-color 0.3s linear;
 }
 .has-scrolled .burger {
@@ -120,5 +134,52 @@ section {
     object-position: 50% 50%;
     opacity: 0.8;
   }
-  
+  /* fixed nav */
+  .fixed-nav {
+    position: absolute;
+    top: calc(var(--v-spacing) * 3);
+    left: var(--h-gutter);
+  }
+  .fixed-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .fixed-nav li {
+    overflow: hidden;
+  }
+  .fixed-nav a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-family: var(--font-headings);
+    position: relative;
+    padding-left: 1.8vw;
+    transform: translateX(-1.8vw);
+    display: block;
+    opacity: 0.4;
+    transition: all 0.3s var(--easing);
+  }
+
+  .fixed-nav li a::before {
+    content: '';
+    display: block;
+    height: 2px;
+    width: 1.3vw;
+    background-color: var(--text-color);
+    position: absolute;
+    top: 50%;
+    left: 0;
+  }
+  .fixed-nav li.is-active a {
+    transform: translateX(0);
+    opacity: 1;
+  }
+.loader-container{
+  background: #202020;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  z-index: 10;
+  overflow: hidden
+}
 `;

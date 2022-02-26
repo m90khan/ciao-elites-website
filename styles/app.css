@@ -486,7 +486,7 @@ header h1 span {
 }
 
 /* =Main */
-main {
+/* main {
   z-index: 1;
   position: relative;
 }
@@ -512,7 +512,7 @@ section {
 }
 
 /* =Portfolio */
-.portfolio {
+/* .portfolio {
   margin-top: var(--v-spacing);
 }
 .portfolio .chapter {
@@ -537,7 +537,7 @@ section {
 }
 .portfolio__image--l,
 .portfolio__image--s {
-  pointer-events: none; /* important to be able to hover over links under the image */
+  pointer-events: none; /* important to be able to hover over links under the image 
   position: absolute;
   width: 28vw;
   top: 11vh;
@@ -574,6 +574,7 @@ section {
   background-color: var(--bcg-fill-color);
   transition: background-color 0.3s linear;
 }
+  */
 
 /* =Blog */
 .blog {

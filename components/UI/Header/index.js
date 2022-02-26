@@ -4,7 +4,7 @@ import styled from 'styled-components';
 const Header = () => {
   return (
     <HeaderContainer>
-      <header data-color='#ACB7AE'>
+      <header data-color='#202020'>
         <h1 id='create'>
           <span>Consectetur</span>
           <span>Adipisicing</span>

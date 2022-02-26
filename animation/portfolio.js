@@ -62,14 +62,18 @@ function createPortfolioMove(e) {
   // move large image
   gsap.to(largeImage, {
     duration: 1.2,
-    y: getPortfolioOffset(clientY) / 2,
+    y: getPortfolioOffset(clientY) / 5,
+    x: getPortfolioOffset(clientY) / 9,
+
     ease: 'power3.out',
   });
 
   // move small image
   gsap.to(smallImage, {
     duration: 1.5,
-    y: getPortfolioOffset(clientY) / 3,
+    y: getPortfolioOffset(clientY) / 2.5,
+    x: getPortfolioOffset(clientY) / 8,
+
     ease: 'power3.out',
   });
 }
