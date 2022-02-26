@@ -4,6 +4,7 @@ import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 import Header from '../../UI/Header';
 import Navigation from '../../UI/Navigation';
+import RevealGallery from '../../UI/RevealGallery';
 
 gsap.registerPlugin(ScrollTrigger);
 const Page = ({ children }) => {
@@ -13,53 +14,15 @@ const Page = ({ children }) => {
     });
   }, []);
   return (
-    <div id='viewport'>
-      <main id='main' data-barba='container'>
-        <Navigation />
-        <Header />
-        {children}
-        <p>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vel animi natus
-          dolorum unde, mollitia odit placeat, dicta, beatae expedita minima ipsa fugiat
-          quaerat ratione ex possimus corporis. Vel, voluptas nemo!
-        </p>
-        <p>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vel animi natus
-          dolorum unde, mollitia odit placeat, dicta, beatae expedita minima ipsa fugiat
-          quaerat ratione ex possimus corporis. Vel, voluptas nemo!
-        </p>{' '}
-        <p>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vel animi natus
-          dolorum unde, mollitia odit placeat, dicta, beatae expedita minima ipsa fugiat
-          quaerat ratione ex possimus corporis. Vel, voluptas nemo!
-        </p>{' '}
-        <p>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vel animi natus
-          dolorum unde, mollitia odit placeat, dicta, beatae expedita minima ipsa fugiat
-          quaerat ratione ex possimus corporis. Vel, voluptas nemo!
-        </p>{' '}
-        <p>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vel animi natus
-          dolorum unde, mollitia odit placeat, dicta, beatae expedita minima ipsa fugiat
-          quaerat ratione ex possimus corporis. Vel, voluptas nemo!
-        </p>{' '}
-        <p>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vel animi natus
-          dolorum unde, mollitia odit placeat, dicta, beatae expedita minima ipsa fugiat
-          quaerat ratione ex possimus corporis. Vel, voluptas nemo!
-        </p>{' '}
-        <p>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vel animi natus
-          dolorum unde, mollitia odit placeat, dicta, beatae expedita minima ipsa fugiat
-          quaerat ratione ex possimus corporis. Vel, voluptas nemo!
-        </p>{' '}
-        <p>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vel animi natus
-          dolorum unde, mollitia odit placeat, dicta, beatae expedita minima ipsa fugiat
-          quaerat ratione ex possimus corporis. Vel, voluptas nemo!
-        </p>
-      </main>
-    </div>
+    <>
+      <Navigation />
+      <div id='viewport'>
+        <main id='main' data-barba='container'>
+          <Header />
+          {children}
+        </main>
+      </div>
+    </>
   );
 };
 
